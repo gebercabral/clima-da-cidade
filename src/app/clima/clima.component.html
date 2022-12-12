@@ -1,0 +1,16 @@
+<mat-card style="text-align: center;">
+
+    <span>Clima da cidade</span>
+
+  <form (ngSubmit)="consultarCidade()">
+     <a>Digite o nome da cidade para verificar o clima</a>
+     <br/>
+     <input type="text" id="cidade" [(ngModel)]="cidade" [ngModelOptions]="{standalone: true}"/>
+    <br/>
+    <button mat-button color="primary" type="submit"> Consultar</button>
+  </form>
+
+  <div>Temperatura:{{ clima.temperatura }}</div>
+    <div>Sensação Térmica:{{ clima.sensacaoTermica }}</div>
+    <div>Umidade : {{ clima.umidade }} </div>
+</mat-card>
